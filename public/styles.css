@@ -1,0 +1,13 @@
+html{
+    font-family: 'Quicksand',sans-serif;
+}
+
+.flex-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.detail{
+    margin: 4rem 1.5rem;
+}

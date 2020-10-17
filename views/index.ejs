@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-  <div class = "container">
+  <div class ="container">
       <div class="searchbar">
           <form action="/" method="post">
             <input type="text" name="searchbar" placeholder="enter your city here">
             <input type="submit" value="Search">
         </form>
       </div>
-      <div class="icon">
+      <div class="flex-container">
+        <div class="icon">
           <img src="" alt="" srcset="">
       </div>
       <div class="CityName">
@@ -24,16 +27,18 @@
             <p><%= city %></p>
           <% } %>                   
       </div>
-      <div class="temp_details">
+      </div>
+      
+      <div class="flex-container">
           <div class="detail">
               <div class="temp">Temperature</div>
               <div class="temp"><%=weatherTemp%>&#8451</div>
           </div>
-          <div>
+          <div class="detail">
               <div class="description">Description</div>
               <div class="description"><%=weatherDescrip%></div>
           </div>
-          <div>
+          <div class="detail">
             <div class="wind">Wind</div>
             <div class="wind"><%=weatherWind%> m/s</div>
         </div>
