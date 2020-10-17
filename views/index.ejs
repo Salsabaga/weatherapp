@@ -17,18 +17,26 @@
       <div class="icon">
           <img src="" alt="" srcset="">
       </div>
-      <div class="CityName">         
-            <p><%= weatherTemp %></p>                   
+      <div class="CityName">
+          <% if (city===null) { %>
+            <h3><%="Lets See"%></h3>
+          <% } else { %>         
+            <p><%= city %></p>
+          <% } %>                   
       </div>
       <div class="temp_details">
           <div class="detail">
               <div class="temp">Temperature</div>
-              <div class="temp">TBD</div>
+              <div class="temp"><%=weatherTemp%>&#8451</div>
           </div>
           <div>
               <div class="description">Description</div>
-              <div class="description">TDB</div>
+              <div class="description"><%=weatherDescrip%></div>
           </div>
+          <div>
+            <div class="wind">Wind</div>
+            <div class="wind"><%=weatherWind%> m/s</div>
+        </div>
       </div>
   </div>
 
