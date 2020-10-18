@@ -2,12 +2,36 @@ html{
     font-family: 'Quicksand',sans-serif;
 }
 
+.cityname{
+    position: static;
+    top: .25%;
+    right: 42.5%;
+    font-weight: 600;
+}
+
+.container{
+    position: relative;
+    border-style: dotted;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(122,217,245,1) 75%);
+}
+
 .flex-container{
-    display:flex;
-    flex-direction: row;
+    display: flex;
     justify-content: center;
 }
 
+#searchbar{
+    position: absolute;
+    right: 5rem;
+}
+
 .detail{
-    margin: 4rem 1.5rem;
+    margin: 2rem 3rem;
+    padding-top: 3rem;
+    font-weight: 500;
+}
+
+.detail p{
+    font-weight: 400;
 }

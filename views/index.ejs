@@ -10,39 +10,51 @@
 </head>
 <body>
   <div class ="container">
-      <div class="searchbar">
+    <div class="top-container">
+      
+        <div class="cityname">
+          <% if (city===null) { %>
+            <h3><%="What's the weather like?"%></h3>
+          <% } else { %>         
+            <h3><%= city %></h3>
+          <% } %>                   
+        </div>
+        <div id="searchbar">
           <form action="/" method="post">
-            <input type="text" name="searchbar" placeholder="enter your city here">
-            <input type="submit" value="Search">
-        </form>
-      </div>
-      <div class="flex-container">
+          <input type="text" name="searchbar" placeholder="enter your city here">
+          <input type="submit" value="Search">
+          </form> 
+        </div>  
         <div class="icon">
           <img src="" alt="" srcset="">
-      </div>
-      <div class="CityName">
-          <% if (city===null) { %>
-            <h3><%="Lets See"%></h3>
-          <% } else { %>         
-            <p><%= city %></p>
-          <% } %>                   
-      </div>
-      </div>
+        </div>
       
+    </div>
+
+    
       <div class="flex-container">
-          <div class="detail">
-              <div class="temp">Temperature</div>
-              <div class="temp"><%=weatherTemp%>&#8451</div>
+        <div class="detail">
+          <div class="temp">Temperature</div>
+          <div class="temp">
+            <p><%=weatherTemp%>&#8451</p>
           </div>
-          <div class="detail">
-              <div class="description">Description</div>
-              <div class="description"><%=weatherDescrip%></div>
+        </div>
+        <div class="detail">
+          <div class="description">Description</div>
+          <div class="description">
+            <p><%=weatherDescrip%></p>
           </div>
-          <div class="detail">
-            <div class="wind">Wind</div>
-            <div class="wind"><%=weatherWind%> m/s</div>
+        </div>
+        <div class="detail">
+          <div class="wind">Wind</div>
+          <div class="wind">
+            <p><%=weatherWind%> m/s</p>
+          </div>
         </div>
       </div>
+      
+ 
+      
   </div>
 
     
