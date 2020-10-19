@@ -5,7 +5,7 @@ let router = express.Router();
 router
 .route("/")
 .get((req,res)=>{
-    res.render("index",{message:null, city: null, weatherTemp:null, weatherDescrip:null, weatherWind:null});
+    res.render("index",{message:null, city: null, weatherTemp:null, weatherDescrip:null, weatherWind:null, weatherIcon:null, weatherHumid:null});
  
  });
  
@@ -28,7 +28,10 @@ router
                 const weatherTemp = data.main.temp;
                 const weatherDescrip = data.weather[0].description;
                 const weatherWind = data.wind.speed;
-                res.render("index",{city,weatherTemp,weatherDescrip,weatherWind});    
+                const weatherHumid = data.main.humidity
+                const weatherIcon = data.weather[0].icon;
+               
+                res.render("index",{city,weatherTemp,weatherDescrip,weatherWind,weatherIcon,weatherHumid});    
              }
      
              

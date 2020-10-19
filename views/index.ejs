@@ -6,50 +6,60 @@
     <script defer src="app.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Weather App</title>
 </head>
 <body>
   <div class ="container">
     <div class="top-container">
-      
-        <div class="cityname">
-          <% if (city===null) { %>
-            <h3><%="What's the weather like?"%></h3>
-          <% } else { %>         
-            <h3><%= city %></h3>
-          <% } %>                   
-        </div>
-        <div id="searchbar">
-          <form action="/" method="post">
-          <input type="text" name="searchbar" placeholder="enter your city here">
-          <input type="submit" value="Search">
-          </form> 
-        </div>  
-        <div class="icon">
-          <img src="" alt="" srcset="">
-        </div>
-      
+      <div id="searchbar">
+        <form action="/" method="post">
+        <input type="text" name="searchbar" placeholder="enter your city here">
+        </form> 
+      </div>
     </div>
 
-    
-      <div class="flex-container">
-        <div class="detail">
-          <div class="temp">Temperature</div>
+    <div class="middle-container">
+      <div class="cityname">
+        <% if (city===null) { %>
+          <h1><%="What's the weather like?"%></h1>
+        <% } else { %>         
+          <h1><%= city %></h1>
+          <img class="icon" src="http://openweathermap.org/img/wn/<%=weatherIcon%>@2x.png" >
+        <% } %>                   
+      </div>
+    </div>    
+        
+      <div class="bottom-container">
+        <div class="main-detail">
+          <% if (weatherTemp===null) { %>
+           <p class="no-data">Let's find out</p>
+          <% } %>       
           <div class="temp">
-            <p><%=weatherTemp%>&#8451</p>
+            <% if (weatherTemp!==null) { %>
+              <p><%=weatherTemp%>&#8451</p>
+    
+            <% } %>
           </div>
-        </div>
-        <div class="detail">
-          <div class="description">Description</div>
           <div class="description">
-            <p><%=weatherDescrip%></p>
+            <% if (weatherDescrip!==null) { %>
+              <p><%=weatherDescrip%></p>
+            <% } %>     
           </div>
         </div>
         <div class="detail">
-          <div class="wind">Wind</div>
-          <div class="wind">
-            <p><%=weatherWind%> m/s</p>
-          </div>
+          <% if (weatherWind!==null) { %>
+            <div class="wind">
+              <p><%=weatherWind%> m/s</p>
+              <h2>Wind</h2>
+            </div>
+            
+          <% } %>  
+          <div class="humidity">
+            <% if (weatherHumid!==null) { %>
+             <p><%=weatherHumid%></p>
+             <h2>Humidity</h2>
+            <% } %>
+          </div>      
         </div>
       </div>
       

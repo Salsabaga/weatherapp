@@ -1,37 +1,105 @@
 html{
     font-family: 'Quicksand',sans-serif;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+input[type=text]{
+    padding: 15px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color:#2595a1;
+    color: white;
 }
 
 .cityname{
-    position: static;
-    top: .25%;
-    right: 42.5%;
-    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10wv;
 }
 
 .container{
     position: relative;
-    border-style: dotted;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(122,217,245,1) 75%);
+    background-color: #28abb9;
 }
 
-.flex-container{
+.main-detail{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    font-weight: 300;
+    font-size: 3.5rem;
+    text-align: center;
+  
 }
 
-#searchbar{
-    position: absolute;
-    right: 5rem;
+.no-data{
+   padding-left: 25px;
 }
+
 
 .detail{
-    margin: 2rem 3rem;
-    padding-top: 3rem;
-    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    text-align: center;
 }
 
 .detail p{
     font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.detail .wind{
+    padding: 0 3rem;
+}
+
+
+.bottom-container{
+    display: flex;
+    justify-content: center;
+    background-color: #2d6187;
+    color: bisque;
+    height: 175px;    
+}
+
+.middle-container{
+    height: 150px;
+    display: flex;
+    justify-content: center
+}
+
+
+
+.temp{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.temp p{
+    text-align: center;
+    margin:0;
+}
+
+.description p{
+    margin: 0;
+}
+
+
+#searchbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#searchbar :focus{
+    outline:none;
+}
+
+::placeholder{
+    color: white;
+    text-align: center;
 }
