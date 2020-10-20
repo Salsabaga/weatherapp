@@ -18,6 +18,7 @@ input[type=text]{
     justify-content: center;
     align-items: center;
     font-size: 10wv;
+    color: #effad3;
 }
 
 .container{
@@ -56,6 +57,10 @@ input[type=text]{
 }
 
 
+footer{
+    text-align: center;
+}
+
 .bottom-container{
     display: flex;
     justify-content: center;
@@ -70,6 +75,9 @@ input[type=text]{
     justify-content: center
 }
 
+.sunrise{
+    padding: 0 30px;
+}
 
 
 .temp{
