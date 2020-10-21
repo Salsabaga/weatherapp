@@ -1,9 +1,9 @@
 html{
     font-family: 'Quicksand',sans-serif;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    background-color: #28abb9;
 }
+
+
 
 input[type=text]{
     padding: 15px 15px;
@@ -13,38 +13,102 @@ input[type=text]{
     color: white;
 }
 
-.cityname{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 10wv;
-    color: #effad3;
+footer{
+    text-align: center;
+    margin-top: 50px;
 }
+
+
+.no-data{
+    margin: auto;
+ }
 
 .container{
+    display: grid;
+    text-align: center;
     position: relative;
-    background-color: #28abb9;
+    padding-bottom: 2rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    
 }
 
-.main-detail{
+.container .bottom-container{
+    margin: auto;
+}
+
+
+/* Top Container */
+
+#searchbar{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchbar :focus{
+    outline:none;
+}
+
+::placeholder{
+    color: white;
+    text-align: center;
+}
+
+/* middle-container */
+
+.middle-container{
+    display: grid;
+    align-content: center;
+    color: #effad3;
+    font-size: 20px;
+}
+
+.cityname{
     display: flex;
-    flex-direction: column;
+    width: 300px;
+    margin: auto;
+    justify-content: flex-start; 
+}
+
+.cityname > h1{
+
+    margin-bottom: 0;
+    
+}
+
+.date h1{
+    margin-top: 0;
+}
+.icon{
+    display: grid;
+    margin: auto;   
+}
+
+/* bottom container */
+
+.bottom-container{
+    display: grid;
+    grid-template-columns: 3;
+    grid-column: 1/2;
+    justify-content: center;
+    background-color: #2d6187;
+    color: bisque;
+    width: 33%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.main-detail{
+    display: grid;
+    align-content: flex-start;
     font-weight: 300;
     font-size: 3.5rem;
     text-align: center;
-  
 }
-
-.no-data{
-   padding-left: 25px;
-}
-
-
 .detail{
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
-    text-align: center;
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: auto auto;
+  
 }
 
 .detail p{
@@ -56,34 +120,8 @@ input[type=text]{
     padding: 0 3rem;
 }
 
-
-footer{
-    text-align: center;
-}
-
-.bottom-container{
-    display: flex;
-    justify-content: center;
-    background-color: #2d6187;
-    color: bisque;
-    height: 175px;    
-}
-
-.middle-container{
-    height: 150px;
-    display: flex;
-    justify-content: center
-}
-
 .sunrise{
     padding: 0 30px;
-}
-
-
-.temp{
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
 }
 
 .temp p{
@@ -95,19 +133,20 @@ footer{
     margin: 0;
 }
 
+.wind{
+    border-bottom-style: solid;
+}
 
-#searchbar{
-    display: flex;
+.humidity{
+    border-bottom-style: solid;
+}
+
+
+.error{
+    display: grid;
     justify-content: center;
-    align-items: center;
-    
+    align-content: center;
+    color: #effad3;
+    font-size: 20px; 
 }
 
-#searchbar :focus{
-    outline:none;
-}
-
-::placeholder{
-    color: white;
-    text-align: center;
-}

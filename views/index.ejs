@@ -2,6 +2,7 @@
 
 
   <div class ="container">
+    <!--Top-->
     <div class="top-container">
       <div id="searchbar">
         <form action="/" method="post">
@@ -9,7 +10,7 @@
         </form> 
       </div>
     </div>
-
+    <!-- middle-->
     <div class="middle-container">
       <div class="cityname">
         <% if (city===null) { %>
@@ -17,11 +18,14 @@
         <% } else { %>         
           <h1><%= city %></h1>
           <img class="icon" src="http://openweathermap.org/img/wn/<%=weatherIcon%>@2x.png" >
-          <h1><%=currentDay%></h1>
-        <% } %>                   
       </div>
+      <div class="date">
+        <h1><%=currentDay%></h1>
+      </div>
+         <% } %>                   
+      
     </div>    
-        
+    <!--bottom-->
       <div class="bottom-container">
         <div class="main-detail">
           <% if (weatherTemp===null) { %>
@@ -30,7 +34,6 @@
           <div class="temp">
             <% if (weatherTemp!==null) { %>
               <p><%=weatherTemp%>&#8451</p>
-    
             <% } %>
           </div>
           <div class="description">
@@ -45,11 +48,10 @@
               <p><%=weatherWind%> m/s</p>
               <h2>Wind</h2>
             </div>
-            
           <% } %>  
-          <div class="humidity">
+            <div class="humidity">
             <% if (weatherHumid!==null) { %>
-             <p><%=weatherHumid%></p>
+             <p><%=weatherHumid%>%</p>
              <h2>Humidity</h2>
             <% } %>
           </div>

@@ -1,14 +1,13 @@
 <%-include("header");-%>
-  <div class = "container">
-        <div class="searchbar">
+  <div class ="top-container">
+        <div id="searchbar">
           <form action="/" method="post">
             <input type="text" name="searchbar" placeholder="enter your city here">
         </form>
         </div>
-        <div>
-            <h1>Whoops! Seem's like you put the wrong city there.</h1>
-        </div>
   </div>
-
+  <div class="error">
+    <h1>Whoops! Seem's like you put the wrong city there.</h1>
+  </div>
     
 <%-include("footer")-%>
